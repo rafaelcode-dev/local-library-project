@@ -33,7 +33,7 @@ function getMostCommonGenres(books) {
     }
   }).sort((a,b) => b.count - a.count).slice(0,5)
 }
-
+//helper function is called
 function getMostPopularBooks(books) {
   newList = sortList(books)
   return newList.map(a => {
@@ -44,7 +44,7 @@ function getMostPopularBooks(books) {
   }).slice(0,5)
   
 }
-
+//helper function is called
 function getMostPopularAuthors(books, authors) {
   const sortedBooks = sortList(books)
   let authorIds = sortedBooks.map(book => book.authorId)
@@ -59,7 +59,7 @@ function getMostPopularAuthors(books, authors) {
   }
 
 
-
+//helper function
 function sortList(list) {
   return newList = list.sort((a,b) => b.borrows.length - a.borrows.length)
 }
